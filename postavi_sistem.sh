@@ -5,7 +5,7 @@ docker network create app-network
 
 #Naredi streznik
 docker build -t server ./server
-docker run -d --privileged --device=/dev/vide0:/dev/video0 --name server --network app-network server
+docker run -d --privileged --device=/dev/video0:/dev/video0 --name server --network app-network server
 
 #Naredi odjemalca
 docker build -t client ./client
